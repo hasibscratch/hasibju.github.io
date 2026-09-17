@@ -19,8 +19,8 @@ if (navToggle) {
 }
 
 /* ── ACTIVE NAV ON SCROLL ─────────────────────── */
-const sections   = document.querySelectorAll('section[id]');
-const navAs      = document.querySelectorAll('.nav-links a');
+const sections    = document.querySelectorAll('section[id]');
+const navAs       = document.querySelectorAll('.nav-links a');
 const secObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -113,36 +113,112 @@ function showToast(msg, duration = 3500) {
   setTimeout(() => toast.classList.remove('show'), duration);
 }
 
-/* ── SCREENSHOT LIGHTBOX ──────────────────────── */
-function openScreenshot(src, caption) {
-  const overlay = document.getElementById('lb-overlay');
-  const content = document.getElementById('lb-content');
-  const cap     = document.getElementById('lb-caption');
+/* ════════════════════════════════════════════════
+   SCREENSHOT GALLERY LIGHTBOX
+   ────────────────────────────────────────────────
+   Supports single image OR multiple images per project.
 
-  cap.textContent = caption || '';
-  content.innerHTML = ''; // clear previous
+   SINGLE image (simple):
+     openScreenshot('img/foo.jpg', 'Project Title')
 
-  const img = new Image();
-  img.onload = function () {
-    content.innerHTML = `<img src="${src}" alt="${caption}" class="lb-img">`;
+   MULTIPLE images (gallery):
+     openScreenshot([
+       { src: 'img/foo1.jpg', caption: 'Overview' },
+       { src: 'img/foo2.jpg', caption: 'Detail view' },
+       { src: 'img/foo3.jpg', caption: 'Mobile view' },
+     ], 'Project Title')
+   ════════════════════════════════════════════════ */
+
+let _gallery  = [];  // [{ src, caption }]
+let _galIdx   = 0;
+let _galTitle = '';
+
+function openScreenshot(images, title) {
+  // Normalise: single string → array of one object
+  if (typeof images === 'string') {
+    _gallery  = [{ src: images, caption: '' }];
+    _galTitle = title || '';
+  } else {
+    _gallery  = Array.isArray(images) ? images : [images];
+    _galTitle = title || '';
+  }
+  _galIdx = 0;
+
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  _renderGallery();
+}
+
+function _renderGallery() {
+  const box     = document.getElementById('lb-box');
+  const total   = _gallery.length;
+  const current = _gallery[_galIdx];
+
+  box.innerHTML = `
+    <button class="lb-close" onclick="closeScreenshot()">✕</button>
+    <div class="lb-stage">
+      ${total > 1 ? `<div class="lb-counter">${_galIdx + 1} / ${total}</div>` : ''}
+      <div id="lb-img-wrap">
+        <div class="lb-loading"><div class="lb-spinner"></div><span>Loading…</span></div>
+      </div>
+      ${total > 1 ? `
+        <button class="lb-arrow lb-prev ${_galIdx === 0 ? 'hidden' : ''}"
+                onclick="galleryNav(-1)" aria-label="Previous">&#8249;</button>
+        <button class="lb-arrow lb-next ${_galIdx === total - 1 ? 'hidden' : ''}"
+                onclick="galleryNav(1)"  aria-label="Next">&#8250;</button>
+      ` : ''}
+    </div>
+    <div class="lb-footer">
+      <div class="lb-caption">${_galTitle}</div>
+      ${current.caption ? `<div class="lb-sub-caption">${current.caption}</div>` : ''}
+      ${total > 1 ? `
+        <div class="lb-dots">
+          ${_gallery.map((_, i) => `
+            <button class="lb-dot ${i === _galIdx ? 'active' : ''}"
+                    onclick="galleryGoto(${i})"
+                    aria-label="Go to image ${i + 1}"></button>
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+
+  // Load image
+  const wrap = document.getElementById('lb-img-wrap');
+  const img  = new Image();
+  img.onload  = () => {
+    wrap.innerHTML = `<img src="${current.src}" alt="${current.caption || _galTitle}" class="lb-img">`;
   };
-  img.onerror = function () {
-    content.innerHTML = `
+  img.onerror = () => {
+    wrap.innerHTML = `
       <div class="lb-no-img">
         <div class="lb-no-icon">📸</div>
         <h3>Screenshot not yet uploaded</h3>
-        <p>Upload your screenshot as <code>${src}</code> to your GitHub <code>img/</code> folder and it will appear here automatically.</p>
+        <p>Upload as <code>${current.src}</code> to your GitHub <code>img/</code> folder and it will appear here automatically.</p>
       </div>`;
   };
-  img.src = src;
+  img.src = current.src;
+}
 
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
+function galleryNav(dir) {
+  const next = _galIdx + dir;
+  if (next >= 0 && next < _gallery.length) {
+    _galIdx = next;
+    _renderGallery();
+  }
+}
+
+function galleryGoto(idx) {
+  _galIdx = idx;
+  _renderGallery();
 }
 
 function closeScreenshot() {
   document.getElementById('lb-overlay').classList.remove('open');
   document.body.style.overflow = '';
+  _gallery  = [];
+  _galIdx   = 0;
+  _galTitle = '';
 }
 
 // Close on backdrop click
@@ -155,9 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Close on Escape key
+// Keyboard navigation
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeScreenshot();
+  if (e.key === 'Escape')     closeScreenshot();
+  if (e.key === 'ArrowRight') galleryNav(1);
+  if (e.key === 'ArrowLeft')  galleryNav(-1);
 });
 
 /* ── CONTACT FORM ─────────────────────────────── */
@@ -188,36 +266,3 @@ function handleFormSubmit(e) {
     showToast('Message ready in your email client!');
   }, 900);
 }
-
-/* ── FORMSPREE UPGRADE (optional) ─────────────────
-   1. Sign up free at formspree.io
-   2. Create a form, copy your Form ID (e.g. xrgvwpqb)
-   3. Replace handleFormSubmit above with this version:
-
-async function handleFormSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('f-btn');
-  const status = document.getElementById('f-status');
-  btn.disabled = true;
-  btn.textContent = 'Sending…';
-  try {
-    const resp = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(e.target),
-    });
-    if (resp.ok) {
-      status.className = 'form-status success';
-      status.textContent = '✅ Message sent! I will reply within 24 hours.';
-      e.target.reset();
-      showToast('Message sent successfully!');
-    } else { throw new Error(); }
-  } catch {
-    status.className = 'form-status error';
-    status.textContent = '❌ Something went wrong. Please email hasibju@gmail.com directly.';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = 'Send Message →';
-  }
-}
-─────────────────────────────────────────────── */
