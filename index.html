@@ -24,7 +24,7 @@
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="nav-logo-fallback" style="display:none">HIM</div>
       <span class="nav-brand-txt">
-        <span class="brand-bracket"></span>HI<span class="brand-bracket"></span>
+        <span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span>
       </span>
     </a>
     <nav>
@@ -321,13 +321,30 @@
     </div>
     <div class="projects-grid" id="projects-grid">
 
-      <!-- P1 -->
+      <!-- ═══════════════════════════════════════════════════════════
+           HOW TO ADD MULTIPLE SCREENSHOTS PER PROJECT:
+           Replace the single 'img/filename.jpg' string with an array:
+
+           openScreenshot([
+             { src: 'img/p1-overview.jpg',  caption: 'Dashboard overview' },
+             { src: 'img/p1-map.jpg',       caption: 'Map view' },
+             { src: 'img/p1-mobile.jpg',    caption: 'Mobile view' },
+           ], 'Project Title')
+
+           Name your files anything you like and put them in the img/ folder.
+           ═══════════════════════════════════════════════════════════ -->
+
+      <!-- P1: Bangladesh Portfolio Mapping — 3 screenshots example -->
       <div class="pcard" data-cat="gis dashboard">
         <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#1a6b3c)"
-             onclick="openScreenshot('img/ss-bangladesh-mapping.jpg','Bangladesh Portfolio Mapping System')">
+             onclick="openScreenshot([
+               {src:'img/p1-overview.jpg',   caption:'Portfolio map overview'},
+               {src:'img/p1-dashboard.jpg',  caption:'Power BI dashboard'},
+               {src:'img/p1-fielddata.jpg',  caption:'KoboToolbox field data'}
+             ],'Bangladesh Portfolio Mapping System')">
           <span class="pcard-icon">🗺️</span>
           <div class="pcard-org">The World Bank</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 3 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span></div>
@@ -335,18 +352,25 @@
           <p>Integrated GIS layers, API-based datasets, KoboToolbox field observations, and project location data to provide real-time spatial insights on development outcomes nationwide.</p>
           <div class="pcard-tech"><span>ArcGIS Online</span><span>Power BI</span><span>KoboToolbox</span><span>API</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-bangladesh-mapping.jpg','Bangladesh Portfolio Mapping System')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p1-overview.jpg',  caption:'Portfolio map overview'},
+              {src:'img/p1-dashboard.jpg', caption:'Power BI dashboard'},
+              {src:'img/p1-fielddata.jpg', caption:'KoboToolbox field data'}
+            ],'Bangladesh Portfolio Mapping System')">📸 3 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P2 -->
+      <!-- P2: EDGE Training -->
       <div class="pcard" data-cat="gis dashboard">
         <div class="pcard-top" style="background:linear-gradient(135deg,#1a4a8a,#2471c8)"
-             onclick="openScreenshot('img/ss-edge-training.jpg','EDGE Training Monitoring Platform')">
+             onclick="openScreenshot([
+               {src:'img/p2-training-map.jpg',    caption:'Geographic coverage map'},
+               {src:'img/p2-training-kpi.jpg',    caption:'KPI dashboard'}
+             ],'EDGE Training Monitoring Platform')">
           <span class="pcard-icon">🎓</span>
           <div class="pcard-org">The World Bank — EDGE Project</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 2 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span></div>
@@ -354,18 +378,24 @@
           <p>Visualised geographic coverage, participant distribution, and training performance indicators for digital government capacity-building across Bangladesh.</p>
           <div class="pcard-tech"><span>Power BI</span><span>GIS</span><span>KoboToolbox</span><span>Python</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-edge-training.jpg','EDGE Training Monitoring Platform')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p2-training-map.jpg', caption:'Geographic coverage map'},
+              {src:'img/p2-training-kpi.jpg', caption:'KPI dashboard'}
+            ],'EDGE Training Monitoring Platform')">📸 2 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P3 -->
+      <!-- P3: GBV Mapping -->
       <div class="pcard" data-cat="gis data">
         <div class="pcard-top" style="background:linear-gradient(135deg,#6c3483,#9b59b6)"
-             onclick="openScreenshot('img/ss-gbv-mapping.jpg','GBV Service Provider Mapping Platform')">
+             onclick="openScreenshot([
+               {src:'img/p3-gbv-map.jpg',      caption:'Service provider map'},
+               {src:'img/p3-gbv-referral.jpg', caption:'Referral pathways'}
+             ],'GBV Service Provider Mapping Platform')">
           <span class="pcard-icon">🔴</span>
           <div class="pcard-org">The World Bank — Bangladesh &amp; Bhutan</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-data">Data System</span></div>
@@ -373,18 +403,25 @@
           <p>Interactive GIS database of service locations and referral pathways to improve access for vulnerable populations in Bangladesh and Bhutan.</p>
           <div class="pcard-tech"><span>KoboToolbox</span><span>ArcGIS Online</span><span>Leaflet.js</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-gbv-mapping.jpg','GBV Service Provider Mapping Platform')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p3-gbv-map.jpg',      caption:'Service provider map'},
+              {src:'img/p3-gbv-referral.jpg', caption:'Referral pathways'}
+            ],'GBV Service Provider Mapping Platform')">📸 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P4 -->
+      <!-- P4: WeCARE -->
       <div class="pcard" data-cat="gis dashboard data">
         <div class="pcard-top" style="background:linear-gradient(135deg,#7d6608,#d4ac0d)"
-             onclick="openScreenshot('img/ss-wecare.jpg','WeCARE Geo-Monitoring Dashboard')">
+             onclick="openScreenshot([
+               {src:'img/p4-wecare-map.jpg',   caption:'Geo-monitoring map'},
+               {src:'img/p4-wecare-dash.jpg',  caption:'Progress dashboard'},
+               {src:'img/p4-wecare-field.jpg', caption:'Field data collection'}
+             ],'WeCARE Geo-Monitoring Dashboard')">
           <span class="pcard-icon">⚡</span>
           <div class="pcard-org">The World Bank — WeCARE Project</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 3 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span><span class="tag-data">Data</span></div>
@@ -392,18 +429,26 @@
           <p>Geotagged field data tracking construction progress, labour participation, safeguard compliance, and community activities across intervention areas.</p>
           <div class="pcard-tech"><span>Power BI</span><span>ArcGIS</span><span>KoboToolbox</span><span>GPS</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-wecare.jpg','WeCARE Geo-Monitoring Dashboard')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p4-wecare-map.jpg',   caption:'Geo-monitoring map'},
+              {src:'img/p4-wecare-dash.jpg',  caption:'Progress dashboard'},
+              {src:'img/p4-wecare-field.jpg', caption:'Field data collection'}
+            ],'WeCARE Geo-Monitoring Dashboard')">📸 3 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P5 -->
+      <!-- P5: Elephant Habitat -->
       <div class="pcard" data-cat="gis">
         <div class="pcard-top" style="background:linear-gradient(135deg,#1e8449,#27ae60)"
-             onclick="openScreenshot('img/ss-elephant.jpg','Elephant Habitat Atlas')">
+             onclick="openScreenshot([
+               {src:'img/p5-elephant-atlas.jpg',     caption:'Elephant Habitat Atlas cover'},
+               {src:'img/p5-elephant-corridors.jpg', caption:'Corridor mapping'},
+               {src:'img/p5-elephant-hec.jpg',       caption:'Human-Elephant Conflict zones'}
+             ],'Elephant Habitat Atlas')">
           <span class="pcard-icon">🐘</span>
           <div class="pcard-org">IUCN — Bangladesh</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 3 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-gis">Conservation</span></div>
@@ -411,18 +456,25 @@
           <p>Nationwide GPS mapping of elephant corridors and conflict zones. Co-published the first Elephant Habitat Atlas with the Bangladesh Forest Department.</p>
           <div class="pcard-tech"><span>ArcGIS</span><span>GPS Mapping</span><span>Remote Sensing</span><span>QGIS</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-elephant.jpg','Elephant Habitat Atlas')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p5-elephant-atlas.jpg',     caption:'Elephant Habitat Atlas cover'},
+              {src:'img/p5-elephant-corridors.jpg', caption:'Corridor mapping'},
+              {src:'img/p5-elephant-hec.jpg',       caption:'Human-Elephant Conflict zones'}
+            ],'Elephant Habitat Atlas')">📸 3 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P6 -->
+      <!-- P6: Flood Risk -->
       <div class="pcard" data-cat="gis data">
         <div class="pcard-top" style="background:linear-gradient(135deg,#922b21,#e74c3c)"
-             onclick="openScreenshot('img/ss-flood-risk.jpg','Flood &amp; Cyclone Vulnerability Mapping')">
+             onclick="openScreenshot([
+               {src:'img/p6-flood-risk.jpg',  caption:'Flood risk map'},
+               {src:'img/p6-cyclone.jpg',     caption:'Cyclone vulnerability map'}
+             ],'Flood & Cyclone Vulnerability Mapping')">
           <span class="pcard-icon">🌊</span>
           <div class="pcard-org">German Red Cross — Bangladesh</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-data">Disaster Risk</span></div>
@@ -430,18 +482,25 @@
           <p>GIS-based flood and cyclone risk assessments producing vulnerability maps using forecast data, satellite imagery, and community inputs for the FbF project.</p>
           <div class="pcard-tech"><span>QGIS</span><span>Satellite Imagery</span><span>FbF</span><span>KoboToolbox</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-flood-risk.jpg','Flood & Cyclone Vulnerability Mapping')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p6-flood-risk.jpg', caption:'Flood risk map'},
+              {src:'img/p6-cyclone.jpg',    caption:'Cyclone vulnerability map'}
+            ],'Flood & Cyclone Vulnerability Mapping')">📸 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P7 -->
+      <!-- P7: WHO Health -->
       <div class="pcard" data-cat="gis data dashboard">
         <div class="pcard-top" style="background:linear-gradient(135deg,#1a5276,#2980b9)"
-             onclick="openScreenshot('img/ss-who-health.jpg','Health Facility Spatial Monitoring')">
+             onclick="openScreenshot([
+               {src:'img/p7-who-facilities.jpg', caption:'Health facility map'},
+               {src:'img/p7-who-disease.jpg',    caption:'Disease surveillance layer'},
+               {src:'img/p7-who-vaccine.jpg',    caption:'Vaccination coverage'}
+             ],'Health Facility Spatial Monitoring')">
           <span class="pcard-icon">🏥</span>
           <div class="pcard-org">WHO — Cox's Bazar, Bangladesh</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 3 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">Health GIS</span><span class="tag-data">Data</span></div>
@@ -449,18 +508,25 @@
           <p>Integrated disease incidence and vaccination data with geospatial layers for thematic maps across 45 facilities in Cox's Bazar camp and host communities.</p>
           <div class="pcard-tech"><span>GIS</span><span>Health Surveillance</span><span>Thematic Mapping</span><span>Excel</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-who-health.jpg','Health Facility Spatial Monitoring')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p7-who-facilities.jpg', caption:'Health facility map'},
+              {src:'img/p7-who-disease.jpg',    caption:'Disease surveillance layer'},
+              {src:'img/p7-who-vaccine.jpg',    caption:'Vaccination coverage'}
+            ],'Health Facility Spatial Monitoring')">📸 3 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P8 -->
+      <!-- P8: Mobile GIS -->
       <div class="pcard" data-cat="data web">
         <div class="pcard-top" style="background:linear-gradient(135deg,#0e6655,#1abc9c)"
-             onclick="openScreenshot('img/ss-mobile-gis.jpg','Mobile GIS Data Collection Solutions')">
+             onclick="openScreenshot([
+               {src:'img/p8-kobo-form.jpg',   caption:'KoboToolbox form design'},
+               {src:'img/p8-kobo-data.jpg',   caption:'Collected data view'}
+             ],'Mobile GIS Data Collection Solutions')">
           <span class="pcard-icon">📱</span>
           <div class="pcard-org">The World Bank — Multiple Projects</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-data">Data System</span><span class="tag-web">Mobile GIS</span></div>
@@ -468,18 +534,25 @@
           <p>Advanced KoboToolbox forms with GPS capture, validation rules, and geospatial workflows. Training delivered to World Bank PIUs, BUET, DAE, and government counterparts.</p>
           <div class="pcard-tech"><span>KoboToolbox</span><span>Survey123</span><span>ODK</span><span>GPS</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-mobile-gis.jpg','Mobile GIS Data Collection')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p8-kobo-form.jpg', caption:'KoboToolbox form design'},
+              {src:'img/p8-kobo-data.jpg', caption:'Collected data view'}
+            ],'Mobile GIS Data Collection Solutions')">📸 Screenshots</button>
           </div>
         </div>
       </div>
 
-      <!-- P9 -->
+      <!-- P9: JU Bankers Forum -->
       <div class="pcard" data-cat="web data">
         <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#2d9458)"
-             onclick="openScreenshot('img/ss-jubf.jpg','JU Bankers Forum Alumni Directory')">
+             onclick="openScreenshot([
+               {src:'img/p9-jubf-home.jpg',      caption:'Home page'},
+               {src:'img/p9-jubf-directory.jpg', caption:'Alumni directory'},
+               {src:'img/p9-jubf-profile.jpg',   caption:'Member profile modal'}
+             ],'JU Bankers Forum Alumni Directory')">
           <span class="pcard-icon">🏦</span>
           <div class="pcard-org">Personal Project</div>
-          <div class="pcard-top-hint">📸 View Screenshot</div>
+          <div class="pcard-top-hint">📸 View 3 Screenshots</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-web">Web</span><span class="tag-data">Data System</span></div>
@@ -487,7 +560,11 @@
           <p>Full-stack alumni directory with live KoboToolbox API, JWT auth, role-based privacy, and filterable member cards for Jahangirnagar University banking alumni.</p>
           <div class="pcard-tech"><span>FastAPI</span><span>Python</span><span>KoboToolbox API</span><span>JWT</span><span>HTML/JS</span></div>
           <div class="pcard-links">
-            <button class="btn-screenshot" onclick="openScreenshot('img/ss-jubf.jpg','JU Bankers Forum')">📸 Screenshot</button>
+            <button class="btn-screenshot" onclick="openScreenshot([
+              {src:'img/p9-jubf-home.jpg',      caption:'Home page'},
+              {src:'img/p9-jubf-directory.jpg', caption:'Alumni directory'},
+              {src:'img/p9-jubf-profile.jpg',   caption:'Member profile modal'}
+            ],'JU Bankers Forum')">📸 3 Screenshots</button>
             <a href="https://github.com/hasibju" target="_blank" class="btn btn-outline-dark btn-sm">GitHub</a>
             <a href="#" class="btn btn-accent btn-sm">Live Demo →</a>
           </div>
@@ -588,7 +665,7 @@
       <div class="footer-brand">
         <img src="img/hilogosmall.png" alt="HIM Logo" class="footer-logo"
              onerror="this.style.display='none'">
-        <span><span class="brand-bracket"></span>HI<span class="brand-bracket"></span></span>
+        <span><span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span> Hasibul Islam</span>
       </div>
       <div class="footer-mid">GIS &amp; Geospatial Analytics Specialist · Dhaka, Bangladesh</div>
       <div class="footer-links">
@@ -601,13 +678,10 @@
   </div>
 </footer>
 
-<!-- ══════════════ SCREENSHOT LIGHTBOX ══════════════ -->
+<!-- ══════════════ SCREENSHOT GALLERY LIGHTBOX ═════════ -->
 <div class="lb-overlay" id="lb-overlay">
-  <div class="lb-box" id="lb-box">
-    <button class="lb-close" onclick="closeScreenshot()">✕</button>
-    <div id="lb-content"></div>
-    <div class="lb-caption" id="lb-caption"></div>
-  </div>
+  <!-- lb-box is rebuilt dynamically by JS -->
+  <div class="lb-box" id="lb-box"></div>
 </div>
 
 <div id="toast" class="toast"></div>
