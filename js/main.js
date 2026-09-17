@@ -19,8 +19,8 @@ if (navToggle) {
 }
 
 /* ── ACTIVE NAV ON SCROLL ─────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navAs    = document.querySelectorAll('.nav-links a');
+const sections   = document.querySelectorAll('section[id]');
+const navAs      = document.querySelectorAll('.nav-links a');
 const secObserver = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -51,7 +51,7 @@ function cycleRole() {
   setTimeout(() => {
     roleEl.textContent = roles[roleIdx % roles.length];
     roleEl.style.transition = 'opacity .4s ease, transform .4s ease';
-    roleEl.style.opacity  = '1';
+    roleEl.style.opacity   = '1';
     roleEl.style.transform = 'translateY(0)';
     roleIdx++;
   }, 320);
@@ -71,25 +71,10 @@ ftabs.forEach(tab => {
     pcards.forEach(card => {
       const cats = card.dataset.cat || '';
       const show = filter === 'all' || cats.split(' ').includes(filter);
-      if (show) {
-        card.classList.remove('hidden');
-        card.style.animation = 'cardIn .35s ease forwards';
-      } else {
-        card.classList.add('hidden');
-      }
+      card.classList.toggle('hidden', !show);
     });
   });
 });
-
-/* Card animation keyframe */
-const styleEl = document.createElement('style');
-styleEl.textContent = `
-  @keyframes cardIn {
-    from { opacity:0; transform:translateY(16px); }
-    to   { opacity:1; transform:translateY(0); }
-  }
-`;
-document.head.appendChild(styleEl);
 
 /* ── SCROLL REVEAL ────────────────────────────── */
 const revealTargets = document.querySelectorAll(
@@ -97,7 +82,7 @@ const revealTargets = document.querySelectorAll(
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
-const revealObs = new IntersectionObserver(entries => {
+const revealObs = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
       setTimeout(() => entry.target.classList.add('visible'), i * 55);
@@ -106,32 +91,6 @@ const revealObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 revealTargets.forEach(el => revealObs.observe(el));
-
-/* ── COUNTER ANIMATION ────────────────────────── */
-function animateCount(el, target, suffix) {
-  const num  = parseInt(target);
-  const step = Math.ceil(num / 45);
-  let cur    = 0;
-  const t    = setInterval(() => {
-    cur = Math.min(cur + step, num);
-    el.textContent = cur + suffix;
-    if (cur >= num) clearInterval(t);
-  }, 30);
-}
-
-const statEls = document.querySelectorAll('.hstat-n[data-target]');
-const statsObs = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting) {
-    statEls.forEach(el => {
-      const raw    = el.dataset.target || el.textContent;
-      const suffix = el.textContent.replace(/\d/g, '');
-      animateCount(el, raw, suffix);
-    });
-    statsObs.disconnect();
-  }
-}, { threshold: 0.5 });
-const statsEl = document.querySelector('.hero-stats');
-if (statsEl) statsObs.observe(statsEl);
 
 /* ── SMOOTH SCROLL ────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -154,12 +113,59 @@ function showToast(msg, duration = 3500) {
   setTimeout(() => toast.classList.remove('show'), duration);
 }
 
+/* ── SCREENSHOT LIGHTBOX ──────────────────────── */
+function openScreenshot(src, caption) {
+  const overlay = document.getElementById('lb-overlay');
+  const content = document.getElementById('lb-content');
+  const cap     = document.getElementById('lb-caption');
+
+  cap.textContent = caption || '';
+  content.innerHTML = ''; // clear previous
+
+  const img = new Image();
+  img.onload = function () {
+    content.innerHTML = `<img src="${src}" alt="${caption}" class="lb-img">`;
+  };
+  img.onerror = function () {
+    content.innerHTML = `
+      <div class="lb-no-img">
+        <div class="lb-no-icon">📸</div>
+        <h3>Screenshot not yet uploaded</h3>
+        <p>Upload your screenshot as <code>${src}</code> to your GitHub <code>img/</code> folder and it will appear here automatically.</p>
+      </div>`;
+  };
+  img.src = src;
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeScreenshot() {
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on backdrop click
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('lb-overlay');
+  if (overlay) {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeScreenshot();
+    });
+  }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeScreenshot();
+});
+
 /* ── CONTACT FORM ─────────────────────────────── */
 function handleFormSubmit(e) {
   e.preventDefault();
   const btn    = document.getElementById('f-btn');
   const status = document.getElementById('f-status');
-  btn.disabled = true;
+  btn.disabled    = true;
   btn.textContent = 'Sending…';
 
   const name    = document.getElementById('f-name').value.trim();
@@ -167,7 +173,6 @@ function handleFormSubmit(e) {
   const subject = document.getElementById('f-subject').value;
   const msg     = document.getElementById('f-msg').value.trim();
 
-  // mailto fallback — replace with Formspree or EmailJS for no-server form handling
   const mailto = `mailto:hasibju@gmail.com`
     + `?subject=${encodeURIComponent('Portfolio Enquiry — ' + (subject || 'General'))}`
     + `&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${subject}\n\nMessage:\n${msg}`)}`;
@@ -175,18 +180,19 @@ function handleFormSubmit(e) {
   window.location.href = mailto;
 
   setTimeout(() => {
-    status.className = 'form-status success';
-    status.textContent = '✅ Your email client has opened with the message ready to send. Alternatively email hasibju@gmail.com directly.';
-    btn.disabled = false;
-    btn.textContent = 'Send Message →';
+    status.className    = 'form-status success';
+    status.textContent  = '✅ Your email client has opened. You can also email hasibju@gmail.com directly.';
+    btn.disabled        = false;
+    btn.textContent     = 'Send Message →';
     e.target.reset();
     showToast('Message ready in your email client!');
   }, 900);
 }
 
-/* ── FORMSPREE UPGRADE (optional, uncomment to use) ─
-   Sign up free at formspree.io, get your form ID,
-   and replace the handleFormSubmit function above with:
+/* ── FORMSPREE UPGRADE (optional) ─────────────────
+   1. Sign up free at formspree.io
+   2. Create a form, copy your Form ID (e.g. xrgvwpqb)
+   3. Replace handleFormSubmit above with this version:
 
 async function handleFormSubmit(e) {
   e.preventDefault();
