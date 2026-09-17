@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hasibul Islam — GIS & Geospatial Analytics Specialist</title>
-  <meta name="description" content="Hasibul Islam — 14 years of GIS, geospatial analytics, Power BI dashboards, KoboToolbox, and full-stack web development. Currently at The World Bank, Bangladesh." />
-  <meta property="og:title" content="Hasibul Islam — GIS & Geospatial Analytics Specialist" />
-  <meta property="og:description" content="14 years turning complex spatial data into decisions that matter. World Bank | WHO | IUCN | German Red Cross." />
-  <meta property="og:type" content="website" />
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hasibul Islam — GIS & Geospatial Analytics Specialist</title>
+<meta name="description" content="14 years of GIS, Power BI, KoboToolbox & web development. Currently at The World Bank, Bangladesh."/>
+<meta property="og:title" content="Hasibul Islam — GIS & Geospatial Analytics Specialist"/>
+<meta property="og:description" content="14 years turning complex spatial data into decisions that matter. World Bank | WHO | IUCN | German Red Cross."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+<!-- ✅ External stylesheet -->
+<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<!-- ══════════════ NAVBAR ══════════════ -->
 <header class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#home" class="nav-brand">
-      <span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span>
+      <!-- Your logo — file: img/hilogosmall.png -->
+      <img src="img/hilogosmall.png" alt="HIM Logo" class="nav-logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="nav-logo-fallback" style="display:none">HIM</div>
+      <span class="nav-brand-txt">
+        <span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span>
+      </span>
     </a>
     <nav>
       <ul class="nav-links" id="nav-links">
@@ -37,81 +43,58 @@
   </div>
 </header>
 
-<!-- ══════════════════════ HERO ══════════════════════ -->
+<!-- ══════════════ HERO ══════════════ -->
 <section class="hero" id="home">
   <div class="hero-bg">
     <div class="hero-grid"></div>
     <div class="hero-blob blob-1"></div>
     <div class="hero-blob blob-2"></div>
   </div>
-
   <div class="hero-content">
     <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Currently at The World Bank, Bangladesh
+      <span class="badge-dot"></span> Currently at The World Bank, Bangladesh
     </div>
-
-    <h1 class="hero-name">
-      Hasibul <span class="accent">Islam</span>
-    </h1>
-
+    <h1 class="hero-name">Hasibul <span class="accent">Islam</span></h1>
     <div class="hero-roles">
-      <span class="role-item" id="role-display">GIS & Geospatial Analytics Specialist</span>
+      <span class="role-item" id="role-display">GIS &amp; Geospatial Analytics Specialist</span>
     </div>
-
     <p class="hero-desc">
       A geographer by training and a spatial analyst by practice — 14 years of turning
       complex spatial data into decisions that matter on the ground.
       From mapping elephant corridors for IUCN to building real-time field monitoring
       systems at the World Bank.
     </p>
-
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-      <a href="resume/Hasibul-Islam-CV.pdf" class="btn btn-ghost" download>Download CV</a>
+      <a href="resume/Hasibul-Islam-CV.pdf" class="btn btn-ghost" download>⬇ Download CV</a>
     </div>
-
     <div class="hero-stats">
-      <div class="hstat">
-        <span class="hstat-n" data-target="14">14</span>
-        <span class="hstat-l">Years Exp.</span>
-      </div>
+      <div class="hstat"><span class="hstat-n">14</span><span class="hstat-l">Years Exp.</span></div>
       <div class="hstat-div"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="6">6</span>
-        <span class="hstat-l">Organisations</span>
-      </div>
+      <div class="hstat"><span class="hstat-n">6</span><span class="hstat-l">Organisations</span></div>
       <div class="hstat-div"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="3">3</span>
-        <span class="hstat-l">Countries</span>
-      </div>
+      <div class="hstat"><span class="hstat-n">3</span><span class="hstat-l">Countries</span></div>
       <div class="hstat-div"></div>
-      <div class="hstat">
-        <span class="hstat-n" data-target="20">20+</span>
-        <span class="hstat-l">Major Projects</span>
-      </div>
+      <div class="hstat"><span class="hstat-n">20+</span><span class="hstat-l">Major Projects</span></div>
     </div>
   </div>
-
   <div class="hero-visual">
     <div class="avatar-ring">
-      <!--
-        REPLACE THE DIV BELOW WITH YOUR PHOTO:
-        <img src="img/hasibul.jpg" alt="Hasibul Islam" class="avatar-img">
-      -->
-      <div class="avatar-placeholder"><img src="img/hasibul.jpg" alt="Hasibul Islam" class="avatar-img"></div>
+      <div class="avatar-placeholder">
+        <!-- Replace inner content with your photo once uploaded -->
+        <img src="img/hasibul.jpg" alt="Hasibul Islam" class="avatar-img"
+             onerror="this.style.display='none'">
+      </div>
       <div class="ring r1"></div>
       <div class="ring r2"></div>
     </div>
     <div class="floating-badge fb-1">🗺️ GIS Expert</div>
     <div class="floating-badge fb-2">⚡ Power BI</div>
     <div class="floating-badge fb-3">🌐 World Bank</div>
-    <div class="floating-badge fb-4">📋 KoboToolBox</div>
+    <div class="floating-badge fb-4">📋 KoboToolbox</div>
     <div class="floating-badge fb-5">🤖 AI Tools</div>
   </div>
-
   <a href="#about" class="scroll-down" aria-label="Scroll down">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="6 9 12 15 18 9"/>
@@ -119,20 +102,20 @@
   </a>
 </section>
 
-<!-- ══════════════════════ ABOUT ══════════════════════ -->
+<!-- ══════════════ ABOUT ══════════════ -->
 <section class="section" id="about">
   <div class="container">
     <div class="about-grid">
-
-      <!-- Left: visual card -->
       <div class="about-left">
         <div class="profile-card">
           <div class="profile-img-wrap">
-            <!-- Replace with: <img src="img/hasibul.jpg" alt="Hasibul Islam" class="profile-img"> -->
-            <div class="profile-img-placeholder"><img src="img/hasibul.jpg" alt="Hasibul Islam" class="profile-img"></div>
+            <div class="profile-img-placeholder">
+              <img src="img/hasibul.jpg" alt="Hasibul Islam" class="profile-img"
+                   onerror="this.style.display='none'">
+            </div>
           </div>
           <h3 class="profile-name">Hasibul Islam</h3>
-          <p class="profile-title">GIS & Geospatial Analytics Specialist</p>
+          <p class="profile-title">GIS &amp; Geospatial Analytics Specialist</p>
           <div class="profile-meta">
             <div class="pmeta"><span>📍</span> Dhaka, Bangladesh</div>
             <div class="pmeta"><span>🏛️</span> The World Bank</div>
@@ -140,36 +123,19 @@
             <div class="pmeta"><span>📅</span> 14 Years Experience</div>
           </div>
           <div class="profile-links">
-            <a href="https://linkedin.com/in/hasibju" target="_blank" class="plink plink-li">in LinkedIn</a>
-            <a href="mailto:hasibju@gmail.com" class="plink plink-em">✉ Email</a>
+            <a href="https://linkedin.com/in/hasibju" target="_blank" class="plink plink-li">💼 LinkedIn</a>
+            <a href="mailto:hasibju@gmail.com" class="plink plink-em">✉ hasibju@gmail.com</a>
           </div>
         </div>
       </div>
-
-      <!-- Right: text -->
       <div class="about-text">
         <div class="section-tag">About Me</div>
         <h2 class="section-title">Spatial Data <span class="accent">Science</span> Meets Real-World Impact</h2>
-
-        <p>
-          I'm Hasibul Islam — a GIS & Geospatial Analytics Specialist with 14 years of experience applying
-          spatial data science to conservation, public health, disaster management, and international development.
-          Currently serving as a Consultant at <strong>The World Bank</strong> in Bangladesh, I lead geospatial monitoring,
-          data pipeline development, and digital transformation initiatives across South Asia.
-        </p>
-        <p>
-          My career spans six organisations — from mapping elephant corridors for <strong>IUCN</strong> to monitoring
-          45 health facilities for <strong>WHO</strong> in Cox's Bazar, from leading flood risk assessments for
-          <strong>German Red Cross</strong> to building portfolio-wide analytics platforms for the World Bank covering
-          Bangladesh, Bhutan, and Pakistan.
-        </p>
-        <p>
-          I combine deep GIS expertise with modern tools — Power BI dashboards, KoboToolbox data systems,
-          Python automation, and Generative AI — to turn complex data into decisions that matter on the ground.
-        </p>
-
+        <p>I'm Hasibul Islam — a GIS &amp; Geospatial Analytics Specialist with 14 years of experience applying spatial data science to conservation, public health, disaster management, and international development. Currently serving as a Consultant at <strong>The World Bank</strong> in Bangladesh, I lead geospatial monitoring, data pipeline development, and digital transformation initiatives across South Asia.</p>
+        <p>My career spans six organisations — from mapping elephant corridors for <strong>IUCN</strong> to monitoring 45 health facilities for <strong>WHO</strong> in Cox's Bazar, from leading flood risk assessments for <strong>German Red Cross</strong> to building portfolio-wide analytics platforms for the World Bank covering Bangladesh, Bhutan, and Pakistan.</p>
+        <p>I combine deep GIS expertise with modern tools — Power BI dashboards, KoboToolbox data systems, Python automation, and Generative AI — to turn complex data into decisions that matter on the ground.</p>
         <div class="about-tags">
-          <span class="atag">Conservation & Environment</span>
+          <span class="atag">Conservation &amp; Environment</span>
           <span class="atag">Disaster Risk Management</span>
           <span class="atag">Public Health GIS</span>
           <span class="atag">International Development</span>
@@ -181,7 +147,7 @@
   </div>
 </section>
 
-<!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
+<!-- ══════════════ EXPERIENCE ══════════════ -->
 <section class="section section-dark" id="experience">
   <div class="container">
     <div class="section-header">
@@ -189,141 +155,99 @@
       <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
       <p class="section-sub">14 years across six leading organisations in GIS, data, and development.</p>
     </div>
-
     <div class="timeline">
 
-      <!-- World Bank -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card current">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">The World Bank</div>
-              <div class="tl-role">Consultant — GEMS Focal, Bangladesh CMU</div>
-            </div>
+            <div><div class="tl-org">🌐 The World Bank</div><div class="tl-role">Consultant — GEMS Focal, Bangladesh CMU</div></div>
             <div class="tl-period current-badge">Jan 2022 – Present</div>
           </div>
           <ul class="tl-list">
             <li>Designed and managed a <strong>portfolio-wide data monitoring platform</strong> integrating multi-source datasets (Kobo, API, Excel) for real-time analytics across Bangladesh, Bhutan, and Pakistan.</li>
-            <li>Developed spatial monitoring dashboards integrating real-time field and sensor data.</li>
+            <li>Developed <strong>spatial monitoring dashboards</strong> integrating real-time field and sensor data.</li>
             <li>Led <strong>GEMS capacity-building</strong> and train-the-trainer sessions across project teams.</li>
-            <li>Leveraged <strong>Generative AI</strong> (ChatGPT, Claude, Gemini) to automate workflows, accelerate dashboard development, and improve operational efficiency.</li>
-            <li>Conducted exploratory data analysis (EDA) and trend analysis to identify patterns, risks, and operational inefficiencies across project portfolios.</li>
+            <li>Leveraged <strong>Generative AI</strong> (ChatGPT, Claude, Gemini) to automate workflows and improve operational efficiency.</li>
+            <li>Conducted <strong>EDA and trend analysis</strong> to identify patterns, risks, and operational inefficiencies.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Power BI</span><span>KoboToolbox</span><span>Python</span><span>GIS</span><span>Generative AI</span>
-          </div>
+          <div class="tl-tags"><span>Power BI</span><span>KoboToolbox</span><span>Python</span><span>ArcGIS Online</span><span>Generative AI</span></div>
         </div>
       </div>
 
-      <!-- WHO -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">World Health Organization (WHO)</div>
-              <div class="tl-role">Data Manager</div>
-            </div>
+            <div><div class="tl-org">🏥 World Health Organization (WHO)</div><div class="tl-role">Data Manager — Cox's Bazar</div></div>
             <div class="tl-period">Jul 2021 – Jan 2022</div>
           </div>
           <ul class="tl-list">
-            <li>Designed data analysis tools for health intervention monitoring and disease surveillance in <strong>Cox's Bazar</strong>.</li>
-            <li>Integrated disease incidence and vaccination coverage data with geospatial layers to produce thematic maps for public health decision-making.</li>
-            <li>Monitored <strong>45 health facilities</strong> across camp and host communities ensuring consistent data reporting.</li>
-            <li>Delivered training on data management tools to government and partner staff.</li>
+            <li>Designed data analysis tools for <strong>health intervention monitoring and disease surveillance</strong>.</li>
+            <li>Integrated disease incidence and vaccination coverage data with geospatial layers for thematic maps.</li>
+            <li>Monitored <strong>45 health facilities</strong> across camp and host communities.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Health GIS</span><span>Data Management</span><span>Thematic Mapping</span><span>Surveillance</span>
-          </div>
+          <div class="tl-tags"><span>Health GIS</span><span>Data Management</span><span>Thematic Mapping</span><span>Surveillance</span></div>
         </div>
       </div>
 
-      <!-- German Red Cross -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">German Red Cross Bangladesh</div>
-              <div class="tl-role">Officer — GIS, IT & Logistics</div>
-            </div>
+            <div><div class="tl-org">🔴 German Red Cross Bangladesh</div><div class="tl-role">Officer — GIS, IT &amp; Logistics</div></div>
             <div class="tl-period">Aug 2016 – Jul 2021</div>
           </div>
           <ul class="tl-list">
-            <li>Led <strong>GIS-based flood and cyclone risk assessments</strong>, producing vulnerability maps using forecast data, satellite imagery, and community inputs.</li>
-            <li>Designed and implemented <strong>mobile data collection systems</strong> (ODK & KoboToolbox) for early warning and community risk monitoring.</li>
-            <li>Developed and maintained IT infrastructure for the <strong>Forecast-based Financing (FbF)</strong> project.</li>
-            <li>Trained staff, volunteers, and community members on GIS and digital data collection.</li>
+            <li>Led <strong>GIS-based flood and cyclone risk assessments</strong> using forecast data and satellite imagery.</li>
+            <li>Designed <strong>mobile data collection systems</strong> (ODK &amp; KoboToolbox) for early warning monitoring.</li>
+            <li>Developed IT infrastructure for the <strong>Forecast-based Financing (FbF)</strong> project.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Flood Risk</span><span>Satellite Imagery</span><span>KoboToolbox</span><span>ODK</span><span>FbF</span>
-          </div>
+          <div class="tl-tags"><span>Flood Risk</span><span>Satellite Imagery</span><span>KoboToolbox</span><span>ODK</span><span>FbF</span></div>
         </div>
       </div>
 
-      <!-- IUCN -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">IUCN — International Union for Conservation of Nature</div>
-              <div class="tl-role">GIS & Remote Sensing Associate</div>
-            </div>
+            <div><div class="tl-org">🐘 IUCN — International Union for Conservation of Nature</div><div class="tl-role">GIS &amp; Remote Sensing Associate</div></div>
             <div class="tl-period">Feb 2015 – Jun 2016</div>
           </div>
           <ul class="tl-list">
-            <li>Led nationwide GPS data collection and mapping of <strong>elephant routes, corridors, and human-elephant conflict (HEC) zones</strong> across Bangladesh.</li>
-            <li>Developed a <strong>national geospatial database</strong> for elephant habitats in collaboration with the Bangladesh Forest Department's RIMS unit.</li>
-            <li>Co-published the <strong>first Elephant Habitat Atlas and Survey Census Book</strong> in partnership with the Forest Department.</li>
+            <li>Nationwide GPS mapping of <strong>elephant routes, corridors, and human-elephant conflict zones</strong>.</li>
+            <li>Co-published the <strong>first Elephant Habitat Atlas</strong> with the Bangladesh Forest Department.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Conservation GIS</span><span>GPS Mapping</span><span>Remote Sensing</span><span>Wildlife</span>
-          </div>
+          <div class="tl-tags"><span>Conservation GIS</span><span>GPS Mapping</span><span>Remote Sensing</span><span>Wildlife</span></div>
         </div>
       </div>
 
-      <!-- IWM -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">Institute of Water Modelling (IWM)</div>
-              <div class="tl-role">GIS Specialist</div>
-            </div>
+            <div><div class="tl-org">💧 Institute of Water Modelling (IWM)</div><div class="tl-role">GIS Specialist</div></div>
             <div class="tl-period">Apr 2012 – Feb 2015</div>
           </div>
           <ul class="tl-list">
-            <li>Led field survey operations using <strong>GPS, DGPS, RTK, and Total Station</strong> delivering high-accuracy spatial datasets to DPHE.</li>
-            <li>Produced road alignment drawings for a <strong>51 km pipeline project</strong> for CWASA supporting strategic infrastructure planning.</li>
-            <li>Provided GIS mapping support to drainage, hydrology, and pipeline modeling teams.</li>
+            <li>Field surveys using <strong>GPS, DGPS, RTK, and Total Station</strong> delivering high-accuracy datasets to DPHE.</li>
+            <li>Produced drawings for a <strong>51 km pipeline project</strong> for CWASA.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Spatial DB</span><span>GPS/DGPS</span><span>Infrastructure GIS</span><span>Hydrology</span>
-          </div>
+          <div class="tl-tags"><span>Spatial DB</span><span>GPS/DGPS</span><span>Infrastructure GIS</span><span>Hydrology</span></div>
         </div>
       </div>
 
-      <!-- HEP -->
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-header">
-            <div>
-              <div class="tl-org">Hexagon Engineering and Planning (HEP)</div>
-              <div class="tl-role">GIS Analyst</div>
-            </div>
+            <div><div class="tl-org">🏗️ Hexagon Engineering and Planning (HEP)</div><div class="tl-role">GIS Analyst</div></div>
             <div class="tl-period">Mar 2010 – Jan 2012</div>
           </div>
           <ul class="tl-list">
-            <li>Digitised and edge-matched Upazila muster plan survey outlines across administrative boundaries.</li>
-            <li>Developed and restructured spatial databases integrating GPS and remote sensing data.</li>
+            <li>Digitised Upazila muster plan survey outlines and restructured spatial databases.</li>
           </ul>
-          <div class="tl-tags">
-            <span>Digitising</span><span>Spatial DB</span><span>Remote Sensing</span>
-          </div>
+          <div class="tl-tags"><span>Digitising</span><span>Spatial DB</span><span>Remote Sensing</span></div>
         </div>
       </div>
 
@@ -331,124 +255,63 @@
   </div>
 </section>
 
-<!-- ══════════════════════ SKILLS ══════════════════════ -->
+<!-- ══════════════ SKILLS ══════════════ -->
 <section class="section section-alt" id="skills">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Technical Skills</div>
-      <h2 class="section-title">Tools & <span class="accent">Technologies</span></h2>
+      <h2 class="section-title">Tools &amp; <span class="accent">Technologies</span></h2>
       <p class="section-sub">A broad, deep toolkit built across 14 years of hands-on project delivery.</p>
     </div>
-
     <div class="skills-grid">
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">🗺️</div>
-        <h3>GIS & Remote Sensing</h3>
+        <div class="skill-cat-icon">🗺️</div><h3>GIS &amp; Remote Sensing</h3>
         <div class="skill-pills">
-          <span class="pill pill-green">ArcGIS Pro</span>
-          <span class="pill pill-green">ArcGIS Online</span>
-          <span class="pill pill-green">QGIS</span>
-          <span class="pill pill-green">ArcGIS Field Maps</span>
-          <span class="pill pill-green">Survey123</span>
-          <span class="pill pill-green">Google Earth Engine</span>
-          <span class="pill pill-green">Remote Sensing</span>
-          <span class="pill pill-green">Satellite Imagery</span>
-          <span class="pill pill-green">GPS / DGPS / RTK</span>
-          <span class="pill pill-green">Spatial Analysis</span>
-          <span class="pill pill-green">Geospatial Modeling</span>
+          <span class="pill pill-green">ArcGIS Pro</span><span class="pill pill-green">ArcGIS Online</span><span class="pill pill-green">QGIS</span><span class="pill pill-green">ArcGIS Field Maps</span><span class="pill pill-green">Survey123</span><span class="pill pill-green">Google Earth Engine</span><span class="pill pill-green">Remote Sensing</span><span class="pill pill-green">Satellite Imagery</span><span class="pill pill-green">GPS / DGPS / RTK</span><span class="pill pill-green">Spatial Analysis</span><span class="pill pill-green">Geospatial Modeling</span>
         </div>
       </div>
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">📊</div>
-        <h3>Data Analysis & Programming</h3>
+        <div class="skill-cat-icon">📊</div><h3>Data Analysis &amp; Programming</h3>
         <div class="skill-pills">
-          <span class="pill pill-blue">Python</span>
-          <span class="pill pill-blue">Pandas / NumPy</span>
-          <span class="pill pill-blue">SQL</span>
-          <span class="pill pill-blue">API Integration</span>
-          <span class="pill pill-blue">Excel (Advanced)</span>
-          <span class="pill pill-blue">Statistical Analysis</span>
-          <span class="pill pill-blue">EDA</span>
-          <span class="pill pill-blue">Data Cleaning</span>
-          <span class="pill pill-blue">Data Pipeline Dev.</span>
+          <span class="pill pill-blue">Python</span><span class="pill pill-blue">Pandas / NumPy</span><span class="pill pill-blue">SQL</span><span class="pill pill-blue">API Integration</span><span class="pill pill-blue">Excel (Advanced)</span><span class="pill pill-blue">Statistical Analysis</span><span class="pill pill-blue">EDA</span><span class="pill pill-blue">Data Cleaning</span><span class="pill pill-blue">Data Pipeline Dev.</span>
         </div>
       </div>
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">⚡</div>
-        <h3>Power BI & Visualisation</h3>
+        <div class="skill-cat-icon">⚡</div><h3>Power BI &amp; Visualisation</h3>
         <div class="skill-pills">
-          <span class="pill pill-yellow">Power BI Desktop</span>
-          <span class="pill pill-yellow">DAX</span>
-          <span class="pill pill-yellow">Power Query</span>
-          <span class="pill pill-yellow">Data Modeling</span>
-          <span class="pill pill-yellow">Interactive Dashboards</span>
-          <span class="pill pill-yellow">KPI Reporting</span>
-          <span class="pill pill-yellow">Matplotlib</span>
-          <span class="pill pill-yellow">Chart.js</span>
+          <span class="pill pill-yellow">Power BI Desktop</span><span class="pill pill-yellow">DAX</span><span class="pill pill-yellow">Power Query</span><span class="pill pill-yellow">Data Modeling</span><span class="pill pill-yellow">Interactive Dashboards</span><span class="pill pill-yellow">KPI Reporting</span><span class="pill pill-yellow">Matplotlib</span><span class="pill pill-yellow">Chart.js</span>
         </div>
       </div>
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">📋</div>
-        <h3>Data Collection & MEL</h3>
+        <div class="skill-cat-icon">📋</div><h3>Data Collection &amp; MEL</h3>
         <div class="skill-pills">
-          <span class="pill pill-purple">KoboToolbox</span>
-          <span class="pill pill-purple">ODK</span>
-          <span class="pill pill-purple">Survey Design</span>
-          <span class="pill pill-purple">M&E Frameworks</span>
-          <span class="pill pill-purple">MEAL</span>
-          <span class="pill pill-purple">Data Governance</span>
-          <span class="pill pill-purple">Data Quality Mgmt.</span>
-          <span class="pill pill-purple">Field Data Systems</span>
+          <span class="pill pill-purple">KoboToolbox</span><span class="pill pill-purple">ODK</span><span class="pill pill-purple">Survey Design</span><span class="pill pill-purple">M&amp;E Frameworks</span><span class="pill pill-purple">MEAL</span><span class="pill pill-purple">Data Governance</span><span class="pill pill-purple">Data Quality Mgmt.</span><span class="pill pill-purple">Field Data Systems</span>
         </div>
       </div>
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">🌐</div>
-        <h3>Web Development</h3>
+        <div class="skill-cat-icon">🌐</div><h3>Web Development</h3>
         <div class="skill-pills">
-          <span class="pill pill-teal">HTML5 / CSS3</span>
-          <span class="pill pill-teal">JavaScript</span>
-          <span class="pill pill-teal">FastAPI (Python)</span>
-          <span class="pill pill-teal">REST APIs</span>
-          <span class="pill pill-teal">SQLite / PostgreSQL</span>
-          <span class="pill pill-teal">GitHub Pages</span>
-          <span class="pill pill-teal">Leaflet.js</span>
-          <span class="pill pill-teal">Responsive Design</span>
+          <span class="pill pill-teal">HTML5 / CSS3</span><span class="pill pill-teal">JavaScript</span><span class="pill pill-teal">FastAPI (Python)</span><span class="pill pill-teal">REST APIs</span><span class="pill pill-teal">SQLite / PostgreSQL</span><span class="pill pill-teal">GitHub Pages</span><span class="pill pill-teal">Leaflet.js</span><span class="pill pill-teal">Responsive Design</span>
         </div>
       </div>
-
       <div class="skill-cat">
-        <div class="skill-cat-icon">🤖</div>
-        <h3>AI & Emerging Tech</h3>
+        <div class="skill-cat-icon">🤖</div><h3>AI &amp; Emerging Tech</h3>
         <div class="skill-pills">
-          <span class="pill pill-orange">ChatGPT</span>
-          <span class="pill pill-orange">Claude (Anthropic)</span>
-          <span class="pill pill-orange">Google Gemini</span>
-          <span class="pill pill-orange">DeepSeek</span>
-          <span class="pill pill-orange">Stable Diffusion</span>
-          <span class="pill pill-orange">Prompt Engineering</span>
-          <span class="pill pill-orange">AI Workflow Automation</span>
-          <span class="pill pill-orange">Knowledge Management</span>
+          <span class="pill pill-orange">ChatGPT</span><span class="pill pill-orange">Claude (Anthropic)</span><span class="pill pill-orange">Google Gemini</span><span class="pill pill-orange">DeepSeek</span><span class="pill pill-orange">Stable Diffusion</span><span class="pill pill-orange">Prompt Engineering</span><span class="pill pill-orange">AI Workflow Automation</span><span class="pill pill-orange">Knowledge Management</span>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ PROJECTS ══════════════════════ -->
+<!-- ══════════════ PROJECTS ══════════════ -->
 <section class="section" id="projects">
   <div class="container">
     <div class="section-header">
       <div class="section-tag">Portfolio</div>
       <h2 class="section-title">Key <span class="accent">Projects</span></h2>
-      <p class="section-sub">Selected real-world projects across GIS, monitoring, dashboards, and web development.</p>
+      <p class="section-sub">Click the banner or the 📸 button on any card to view a screenshot. Add images to the <code style="background:var(--bg-card);padding:.1rem .4rem;border-radius:4px;font-size:.8rem;color:var(--accent)">img/</code> folder.</p>
     </div>
-
     <div class="filter-tabs">
       <button class="ftab active" data-filter="all">All</button>
       <button class="ftab" data-filter="gis">GIS</button>
@@ -456,135 +319,177 @@
       <button class="ftab" data-filter="data">Data Systems</button>
       <button class="ftab" data-filter="web">Web</button>
     </div>
-
     <div class="projects-grid" id="projects-grid">
 
-      <!-- P1: Bangladesh Portfolio Mapping -->
+      <!-- P1 -->
       <div class="pcard" data-cat="gis dashboard">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#1a6b3c)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#1a6b3c)"
+             onclick="openScreenshot('img/ss-bangladesh-mapping.jpg','Bangladesh Portfolio Mapping System')">
           <span class="pcard-icon">🗺️</span>
           <div class="pcard-org">The World Bank</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span></div>
           <h3>Bangladesh Portfolio Mapping System</h3>
-          <p>Integrated GIS layers, API-based datasets, KoboToolbox field observations, and project location data to provide real-time spatial insights on project implementation and development outcomes nationwide.</p>
+          <p>Integrated GIS layers, API-based datasets, KoboToolbox field observations, and project location data to provide real-time spatial insights on development outcomes nationwide.</p>
           <div class="pcard-tech"><span>ArcGIS Online</span><span>Power BI</span><span>KoboToolbox</span><span>API</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-bangladesh-mapping.jpg','Bangladesh Portfolio Mapping System')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P2: EDGE Training Monitoring -->
+      <!-- P2 -->
       <div class="pcard" data-cat="gis dashboard">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#1a4a8a,#2471c8)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#1a4a8a,#2471c8)"
+             onclick="openScreenshot('img/ss-edge-training.jpg','EDGE Training Monitoring Platform')">
           <span class="pcard-icon">🎓</span>
           <div class="pcard-org">The World Bank — EDGE Project</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span></div>
           <h3>Spatially Enabled Training Monitoring Platform</h3>
-          <p>Visualised geographic coverage, participant distribution, and training performance indicators to support digital government capacity-building initiatives across Bangladesh.</p>
+          <p>Visualised geographic coverage, participant distribution, and training performance indicators for digital government capacity-building across Bangladesh.</p>
           <div class="pcard-tech"><span>Power BI</span><span>GIS</span><span>KoboToolbox</span><span>Python</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-edge-training.jpg','EDGE Training Monitoring Platform')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P3: GBV Service Provider Mapping -->
+      <!-- P3 -->
       <div class="pcard" data-cat="gis data">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#6c3483,#9b59b6)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#6c3483,#9b59b6)"
+             onclick="openScreenshot('img/ss-gbv-mapping.jpg','GBV Service Provider Mapping Platform')">
           <span class="pcard-icon">🔴</span>
-          <div class="pcard-org">The World Bank — Bangladesh & Bhutan</div>
+          <div class="pcard-org">The World Bank — Bangladesh &amp; Bhutan</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-data">Data System</span></div>
           <h3>GBV Service Provider Mapping Platform</h3>
-          <p>Interactive GIS database of service locations and referral pathways using KoboToolbox and existing datasets to improve access to critical services for vulnerable populations in Bangladesh and Bhutan.</p>
+          <p>Interactive GIS database of service locations and referral pathways to improve access for vulnerable populations in Bangladesh and Bhutan.</p>
           <div class="pcard-tech"><span>KoboToolbox</span><span>ArcGIS Online</span><span>Leaflet.js</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-gbv-mapping.jpg','GBV Service Provider Mapping Platform')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P4: WeCARE Geo-Monitoring -->
+      <!-- P4 -->
       <div class="pcard" data-cat="gis dashboard data">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#7d6608,#d4ac0d)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#7d6608,#d4ac0d)"
+             onclick="openScreenshot('img/ss-wecare.jpg','WeCARE Geo-Monitoring Dashboard')">
           <span class="pcard-icon">⚡</span>
           <div class="pcard-org">The World Bank — WeCARE Project</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-dash">Dashboard</span><span class="tag-data">Data</span></div>
           <h3>WeCARE Geo-Monitoring Dashboard</h3>
-          <p>Leveraged field-collected geotagged data to track construction progress, labour participation, safeguard compliance, and community activities across intervention areas.</p>
+          <p>Geotagged field data tracking construction progress, labour participation, safeguard compliance, and community activities across intervention areas.</p>
           <div class="pcard-tech"><span>Power BI</span><span>ArcGIS</span><span>KoboToolbox</span><span>GPS</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-wecare.jpg','WeCARE Geo-Monitoring Dashboard')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P5: Elephant Habitat Atlas — IUCN -->
+      <!-- P5 -->
       <div class="pcard" data-cat="gis">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#1e8449,#27ae60)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#1e8449,#27ae60)"
+             onclick="openScreenshot('img/ss-elephant.jpg','Elephant Habitat Atlas')">
           <span class="pcard-icon">🐘</span>
           <div class="pcard-org">IUCN — Bangladesh</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-gis">Conservation</span></div>
-          <h3>Elephant Habitat Atlas & National Geospatial Database</h3>
-          <p>Nationwide GPS mapping of elephant routes, corridors, and human-elephant conflict (HEC) zones. Co-published the first Elephant Habitat Atlas with the Bangladesh Forest Department.</p>
+          <h3>Elephant Habitat Atlas &amp; National Geospatial Database</h3>
+          <p>Nationwide GPS mapping of elephant corridors and conflict zones. Co-published the first Elephant Habitat Atlas with the Bangladesh Forest Department.</p>
           <div class="pcard-tech"><span>ArcGIS</span><span>GPS Mapping</span><span>Remote Sensing</span><span>QGIS</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-elephant.jpg','Elephant Habitat Atlas')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P6: Flood Risk Mapping — German Red Cross -->
+      <!-- P6 -->
       <div class="pcard" data-cat="gis data">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#922b21,#e74c3c)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#922b21,#e74c3c)"
+             onclick="openScreenshot('img/ss-flood-risk.jpg','Flood &amp; Cyclone Vulnerability Mapping')">
           <span class="pcard-icon">🌊</span>
           <div class="pcard-org">German Red Cross — Bangladesh</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">GIS</span><span class="tag-data">Disaster Risk</span></div>
-          <h3>Flood & Cyclone Risk Vulnerability Mapping</h3>
-          <p>GIS-based flood and cyclone risk assessments producing vulnerability maps using forecast data, satellite imagery, and community-level inputs for the Forecast-based Financing (FbF) project.</p>
+          <h3>Flood &amp; Cyclone Risk Vulnerability Mapping</h3>
+          <p>GIS-based flood and cyclone risk assessments producing vulnerability maps using forecast data, satellite imagery, and community inputs for the FbF project.</p>
           <div class="pcard-tech"><span>QGIS</span><span>Satellite Imagery</span><span>FbF</span><span>KoboToolbox</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-flood-risk.jpg','Flood & Cyclone Vulnerability Mapping')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P7: Health Facility Monitoring — WHO -->
+      <!-- P7 -->
       <div class="pcard" data-cat="gis data dashboard">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#1a5276,#2980b9)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#1a5276,#2980b9)"
+             onclick="openScreenshot('img/ss-who-health.jpg','Health Facility Spatial Monitoring')">
           <span class="pcard-icon">🏥</span>
           <div class="pcard-org">WHO — Cox's Bazar, Bangladesh</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-gis">Health GIS</span><span class="tag-data">Data</span></div>
           <h3>Health Facility Spatial Monitoring System</h3>
-          <p>Integrated disease incidence and vaccination coverage data with geospatial layers to produce thematic maps across 45 health facilities in camp and host communities in Cox's Bazar.</p>
+          <p>Integrated disease incidence and vaccination data with geospatial layers for thematic maps across 45 facilities in Cox's Bazar camp and host communities.</p>
           <div class="pcard-tech"><span>GIS</span><span>Health Surveillance</span><span>Thematic Mapping</span><span>Excel</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-who-health.jpg','Health Facility Spatial Monitoring')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P8: Mobile GIS KoboToolbox -->
+      <!-- P8 -->
       <div class="pcard" data-cat="data web">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#0e6655,#1abc9c)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#0e6655,#1abc9c)"
+             onclick="openScreenshot('img/ss-mobile-gis.jpg','Mobile GIS Data Collection Solutions')">
           <span class="pcard-icon">📱</span>
           <div class="pcard-org">The World Bank — Multiple Projects</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-data">Data System</span><span class="tag-web">Mobile GIS</span></div>
           <h3>Mobile GIS Data Collection Solutions</h3>
-          <p>Designed and deployed advanced KoboToolbox digital forms with GPS capture, validation rules, and geospatial workflows. Delivered training to World Bank PIUs, BUET, DAE, and government counterparts.</p>
+          <p>Advanced KoboToolbox forms with GPS capture, validation rules, and geospatial workflows. Training delivered to World Bank PIUs, BUET, DAE, and government counterparts.</p>
           <div class="pcard-tech"><span>KoboToolbox</span><span>Survey123</span><span>ODK</span><span>GPS</span></div>
+          <div class="pcard-links">
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-mobile-gis.jpg','Mobile GIS Data Collection')">📸 Screenshot</button>
+          </div>
         </div>
       </div>
 
-      <!-- P9: JU Bankers Forum -->
+      <!-- P9 -->
       <div class="pcard" data-cat="web data">
-        <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#2d9458)">
+        <div class="pcard-top" style="background:linear-gradient(135deg,#0f4a28,#2d9458)"
+             onclick="openScreenshot('img/ss-jubf.jpg','JU Bankers Forum Alumni Directory')">
           <span class="pcard-icon">🏦</span>
           <div class="pcard-org">Personal Project</div>
+          <div class="pcard-top-hint">📸 View Screenshot</div>
         </div>
         <div class="pcard-body">
           <div class="pcard-tags"><span class="tag-web">Web</span><span class="tag-data">Data System</span></div>
           <h3>JU Bankers' Forum — Alumni Directory</h3>
-          <p>Full-stack alumni directory web application with live KoboToolbox data integration, JWT authentication, role-based privacy controls, and filterable member directory. Built for Jahangirnagar University banking alumni.</p>
+          <p>Full-stack alumni directory with live KoboToolbox API, JWT auth, role-based privacy, and filterable member cards for Jahangirnagar University banking alumni.</p>
           <div class="pcard-tech"><span>FastAPI</span><span>Python</span><span>KoboToolbox API</span><span>JWT</span><span>HTML/JS</span></div>
           <div class="pcard-links">
-            <a href="https://github.com/hasibju" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
-            <a href="#" class="btn btn-sm btn-accent">Live Demo →</a>
+            <button class="btn-screenshot" onclick="openScreenshot('img/ss-jubf.jpg','JU Bankers Forum')">📸 Screenshot</button>
+            <a href="https://github.com/hasibju" target="_blank" class="btn btn-outline-dark btn-sm">GitHub</a>
+            <a href="#" class="btn btn-accent btn-sm">Live Demo →</a>
           </div>
         </div>
       </div>
@@ -593,244 +498,121 @@
   </div>
 </section>
 
-<!-- ══════════════════════ EDUCATION & TRAINING ══════════════════════ -->
+<!-- ══════════════ EDUCATION ══════════════ -->
 <section class="section section-alt" id="education">
   <div class="container">
     <div class="section-header">
-      <div class="section-tag">Education & Training</div>
+      <div class="section-tag">Education &amp; Training</div>
       <h2 class="section-title">Academic <span class="accent">Background</span></h2>
     </div>
-
     <div class="edu-training-grid">
-
-      <!-- Education -->
       <div>
         <h3 class="sub-heading">🎓 Degrees</h3>
         <div class="edu-cards">
-          <div class="edu-card">
-            <div class="edu-icon">🎓</div>
-            <div class="edu-body">
-              <div class="edu-degree">Master of Science in Disaster Management</div>
-              <div class="edu-uni">University of Dhaka</div>
-              <div class="edu-year">2018</div>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-icon">🌍</div>
-            <div class="edu-body">
-              <div class="edu-degree">Master of Science in Geography & Environment</div>
-              <div class="edu-uni">Jahangirnagar University</div>
-              <div class="edu-year">2009</div>
-            </div>
-          </div>
-          <div class="edu-card">
-            <div class="edu-icon">🗺️</div>
-            <div class="edu-body">
-              <div class="edu-degree">Bachelor of Science in Geography & Environment</div>
-              <div class="edu-uni">Jahangirnagar University</div>
-              <div class="edu-year">2008</div>
-            </div>
-          </div>
+          <div class="edu-card"><div class="edu-icon">🎓</div><div><div class="edu-degree">Master of Science in Disaster Management</div><div class="edu-uni">University of Dhaka</div><div class="edu-year">2018</div></div></div>
+          <div class="edu-card"><div class="edu-icon">🌍</div><div><div class="edu-degree">Master of Science in Geography &amp; Environment</div><div class="edu-uni">Jahangirnagar University</div><div class="edu-year">2009</div></div></div>
+          <div class="edu-card"><div class="edu-icon">🗺️</div><div><div class="edu-degree">Bachelor of Science in Geography &amp; Environment</div><div class="edu-uni">Jahangirnagar University</div><div class="edu-year">2008</div></div></div>
         </div>
       </div>
-
-      <!-- Training & Certifications -->
       <div>
-        <h3 class="sub-heading">📜 Training & Certifications</h3>
+        <h3 class="sub-heading">📜 Training &amp; Certifications</h3>
         <div class="cert-list">
-          <div class="cert-item">
-            <span class="cert-dot cert-new"></span>
-            <div>
-              <div class="cert-name">28-Day AI Certificate Program</div>
-              <div class="cert-org">Coursiv · 2026</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot cert-new"></span>
-            <div>
-              <div class="cert-name">Master of DeepSeek</div>
-              <div class="cert-org">Coursiv · 2026</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot cert-new"></span>
-            <div>
-              <div class="cert-name">Master of Stable Diffusion</div>
-              <div class="cert-org">Coursiv · 2026</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">Data, Analytics and Digital Deep Dive</div>
-              <div class="cert-org">World Bank Group · Online · 2022</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">Advanced GIS Training</div>
-              <div class="cert-org">World Food Programme (WFP) · Dhaka · 2018</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">Global Surge Information Management</div>
-              <div class="cert-org">IFRC · Bangkok, Thailand · 2018</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">MEAL — Monitoring, Evaluation, Accountability & Learning</div>
-              <div class="cert-org">German Red Cross · Hanoi, Vietnam · 2018</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">Disaster Risk Management (DRM)</div>
-              <div class="cert-org">Bangladesh Red Crescent Society · Dhaka · 2018</div>
-            </div>
-          </div>
-          <div class="cert-item">
-            <span class="cert-dot"></span>
-            <div>
-              <div class="cert-name">Database Administration & Management</div>
-              <div class="cert-org">University of Dhaka · 2014</div>
-            </div>
-          </div>
+          <div class="cert-item"><span class="cert-dot cert-new"></span><div><div class="cert-name">28-Day AI Certificate Program</div><div class="cert-org">Coursiv · 2026</div></div></div>
+          <div class="cert-item"><span class="cert-dot cert-new"></span><div><div class="cert-name">Master of DeepSeek</div><div class="cert-org">Coursiv · 2026</div></div></div>
+          <div class="cert-item"><span class="cert-dot cert-new"></span><div><div class="cert-name">Master of Stable Diffusion</div><div class="cert-org">Coursiv · 2026</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">Data, Analytics and Digital Deep Dive</div><div class="cert-org">World Bank Group · Online · 2022</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">Advanced GIS Training</div><div class="cert-org">World Food Programme (WFP) · Dhaka · 2018</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">Global Surge Information Management</div><div class="cert-org">IFRC · Bangkok, Thailand · 2018</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">MEAL — Monitoring, Evaluation, Accountability &amp; Learning</div><div class="cert-org">German Red Cross · Hanoi, Vietnam · 2018</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">Disaster Risk Management (DRM)</div><div class="cert-org">Bangladesh Red Crescent Society · Dhaka · 2018</div></div></div>
+          <div class="cert-item"><span class="cert-dot"></span><div><div class="cert-name">Database Administration &amp; Management</div><div class="cert-org">University of Dhaka · 2014</div></div></div>
         </div>
       </div>
-
     </div>
-
-    <!-- Languages -->
     <div class="lang-section">
       <h3 class="sub-heading">🌐 Languages</h3>
       <div class="lang-cards">
-        <div class="lang-card">
-          <div class="lang-name">Bengali</div>
-          <div class="lang-level native">Native</div>
-        </div>
-        <div class="lang-card">
-          <div class="lang-name">English</div>
-          <div class="lang-level professional">Professional Working Proficiency</div>
-        </div>
+        <div class="lang-card"><div class="lang-name">Bengali</div><div class="lang-level native">Native</div></div>
+        <div class="lang-card"><div class="lang-name">English</div><div class="lang-level professional">Professional Working Proficiency</div></div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════ CONTACT ══════════════════════ -->
+<!-- ══════════════ CONTACT ══════════════ -->
 <section class="section" id="contact">
   <div class="container">
     <div class="contact-wrap">
       <div class="contact-info">
         <div class="section-tag">Get In Touch</div>
         <h2 class="section-title">Let's Work <span class="accent">Together</span></h2>
-        <p>
-          Whether you need a GIS analysis, a Power BI dashboard, a KoboToolbox data system, a web application,
-          or geospatial consulting — I'd love to hear about your project.
-        </p>
-
+        <p>Whether you need a GIS analysis, a Power BI dashboard, a KoboToolbox data system, a web application, or geospatial consulting — I'd love to hear about your project.</p>
         <div class="contact-cards">
-          <a href="mailto:hasibju@gmail.com" class="ccard">
-            <div class="ccard-icon">📧</div>
-            <div>
-              <div class="ccard-label">Personal Email</div>
-              <div class="ccard-val">hasibju@gmail.com</div>
-            </div>
-          </a>
-          <a href="tel:+8801811224441" class="ccard">
-            <div class="ccard-icon">📞</div>
-            <div>
-              <div class="ccard-label">Phone / WhatsApp</div>
-              <div class="ccard-val">+880 1811 224441</div>
-            </div>
-          </a>
-          <a href="https://linkedin.com/in/hasibju" class="ccard" target="_blank">
-            <div class="ccard-icon">💼</div>
-            <div>
-              <div class="ccard-label">LinkedIn</div>
-              <div class="ccard-val">linkedin.com/in/hasibju</div>
-            </div>
-          </a>
-          <div class="ccard no-link">
-            <div class="ccard-icon">📍</div>
-            <div>
-              <div class="ccard-label">Location</div>
-              <div class="ccard-val">Motijheel, Dhaka, Bangladesh</div>
-            </div>
-          </div>
+          <a href="mailto:hasibju@gmail.com" class="ccard"><div class="ccard-icon">📧</div><div><div class="ccard-label">Personal Email</div><div class="ccard-val">hasibju@gmail.com</div></div></a>
+          <a href="tel:+8801811224441" class="ccard"><div class="ccard-icon">📞</div><div><div class="ccard-label">Phone / WhatsApp</div><div class="ccard-val">+880 1811 224441</div></div></a>
+          <a href="https://linkedin.com/in/hasibju" class="ccard" target="_blank"><div class="ccard-icon">💼</div><div><div class="ccard-label">LinkedIn</div><div class="ccard-val">linkedin.com/in/hasibju</div></div></a>
+          <div class="ccard no-link"><div class="ccard-icon">📍</div><div><div class="ccard-label">Location</div><div class="ccard-val">Motijheel, Dhaka, Bangladesh</div></div></div>
         </div>
       </div>
-
       <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
         <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;color:var(--text)">Send a Message</h3>
         <div class="form-row-2">
-          <div class="form-group">
-            <label for="f-name">Your Name</label>
-            <input type="text" id="f-name" placeholder="Your full name" required />
-          </div>
-          <div class="form-group">
-            <label for="f-email">Email Address</label>
-            <input type="email" id="f-email" placeholder="your@email.com" required />
-          </div>
+          <div class="form-group"><label for="f-name">Your Name</label><input type="text" id="f-name" placeholder="Your full name" required/></div>
+          <div class="form-group"><label for="f-email">Email Address</label><input type="email" id="f-email" placeholder="your@email.com" required/></div>
         </div>
         <div class="form-group">
           <label for="f-subject">Subject / Service Needed</label>
           <select id="f-subject">
             <option value="">— Select —</option>
-            <option>GIS & Geospatial Analysis</option>
+            <option>GIS &amp; Geospatial Analysis</option>
             <option>Power BI Dashboard</option>
             <option>KoboToolbox Data System</option>
             <option>Web Application Development</option>
-            <option>Spatial Database & Mapping</option>
-            <option>Training & Capacity Building</option>
+            <option>Spatial Database &amp; Mapping</option>
+            <option>Training &amp; Capacity Building</option>
             <option>Other / General Enquiry</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="f-msg">Message</label>
-          <textarea id="f-msg" rows="5" placeholder="Tell me about your project, dataset, goals, and timeline…" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%" id="f-btn">
-          Send Message →
-        </button>
+        <div class="form-group"><label for="f-msg">Message</label><textarea id="f-msg" rows="5" placeholder="Tell me about your project, dataset, goals, and timeline…" required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%" id="f-btn">Send Message →</button>
         <div id="f-status" class="form-status"></div>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<!-- ══════════════ FOOTER ══════════════ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span>
-        <span style="margin-left:.5rem">Hasibul Islam</span>
+        <img src="img/hilogosmall.png" alt="HIM Logo" class="footer-logo"
+             onerror="this.style.display='none'">
+        <span><span class="brand-bracket">&lt;</span>HIM<span class="brand-bracket">/&gt;</span> Hasibul Islam</span>
       </div>
-      <div class="footer-mid">
-        GIS & Geospatial Analytics Specialist · Dhaka, Bangladesh
-      </div>
+      <div class="footer-mid">GIS &amp; Geospatial Analytics Specialist · Dhaka, Bangladesh</div>
       <div class="footer-links">
         <a href="https://linkedin.com/in/hasibju" target="_blank">LinkedIn</a>
         <a href="mailto:hasibju@gmail.com">Email</a>
         <a href="resume/Hasibul-Islam-CV.pdf" download>CV</a>
       </div>
     </div>
-    <div class="footer-copy">
-      © 2026 Hasibul Islam · Built with HTML/CSS/JS · Hosted free on GitHub Pages
-    </div>
+    <div class="footer-copy">© 2026 Hasibul Islam · Built with HTML/CSS/JS · Hosted free on GitHub Pages</div>
   </div>
 </footer>
 
+<!-- ══════════════ SCREENSHOT LIGHTBOX ══════════════ -->
+<div class="lb-overlay" id="lb-overlay">
+  <div class="lb-box" id="lb-box">
+    <button class="lb-close" onclick="closeScreenshot()">✕</button>
+    <div id="lb-content"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+</div>
+
 <div id="toast" class="toast"></div>
 
+<!-- ✅ External JavaScript -->
 <script src="js/main.js"></script>
 </body>
 </html>
