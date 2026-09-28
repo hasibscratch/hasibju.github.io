@@ -35,7 +35,9 @@ sections.forEach(s => secObserver.observe(s));
 /* ── ROLE TYPER ───────────────────────────────── */
 const roles = [
   'GIS & Geospatial Analytics Specialist',
-  'Power BI Dashboard Developer',
+   'Digital Operations & Program Specialist',
+  'IT Procurement & Data Governance',
+   'Power BI Dashboard Developer',
   'Spatial Data Scientist',
   'KoboToolbox & Data Systems Expert',
   'Web & Full-Stack Developer',
